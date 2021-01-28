@@ -1,0 +1,541 @@
+/********** Police ***************/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,100;1,400&display=swap');
+
+/********** Structure ************/
+
+:root {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /** pour avoir une affichage en plein écran; vh:viewport-height**/
+    max-width: 95%;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    /**raccourcie : flex-grow; flex-shrink; flex-basis**/
+}
+
+* {
+    box-sizing: inherit;
+}
+
+footer {
+    width: 100%;
+    background: #aaa;
+}
+
+
+/********* Mise en forme ***********/
+
+#mainHeader {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    top: 0;
+    align-items: center;
+    height: 95px;
+}
+
+.headerLogo {
+    display: block;
+    border: 0;
+    padding: 0.5em;
+    position: absolute;
+    ;
+}
+
+.headerSignUp {
+    margin: 0 auto;
+    padding: 1.5rem;
+    color: #0065FC;
+    font-weight: 600;
+}
+
+.headerNav {
+    width: 90%;
+    top: 0;
+}
+
+.headerNav ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.headerNav ul li {
+    width: 160px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    padding: 1.2rem;
+    border-bottom: 3px transparent solid;
+}
+
+.headerNav ul li a:hover {
+    color: #0065FC;
+}
+
+.searchHeaderTitle {
+    margin-bottom: 0.5rem;
+}
+
+.searchHeaderSubtitle {
+    margin-top: 0;
+}
+
+.searchForm {
+    display: flex;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.searchFormIcon {
+    background-color: #f2f2f2;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
+}
+
+.searchFormIcon i {
+    margin-left: 0.1rem;
+}
+
+.searchFormInput {
+    border-right: none;
+    border-left: none;
+    border-top: #F2F2F2 1px solid;
+    border-bottom: #F2F2F2 1px solid;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    width: 14rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+}
+
+.searchFormInput::placeholder {
+    font-family: "Raleway", "Sans serif";
+    font-size: 1rem;
+    color: #00000069;
+}
+
+.searchFormBtn {
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1.5rem;
+    font-family: "Raleway", "Sans serif";
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.filter {
+    display: flex;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.filterTitle {
+    margin: 0 2rem 1rem 0;
+    align-self: center;
+}
+
+.filterItem {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    border: 2px solid #DEEBFF;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filterItem:last-child {
+    margin-right: 0;
+}
+
+.filterItem:hover {
+    background-color: #f3f8ff;
+    transform: scale(1.015);
+}
+
+.filterItemIcon {
+    background-color: #DEEBFF;
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -2px;
+}
+
+.filterItemIcon i {
+    color: blue;
+}
+
+.filterItemTitle {
+    margin: 0 1rem;
+}
+
+.filterResult {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.filterResultIcon {
+    height: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    border: solid 1px #d9d9d9;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.filterResultIcon i {
+    color: #0065FC;
+}
+
+.filterResultText {
+    margin: 0;
+}
+
+aside {
+    width: 35%;
+    margin: 10px;
+    background-color: #F2F2F2;
+}
+
+.asideContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.asideContent,
+.roomsContent {
+    width: 90%;
+}
+
+#rooms,
+#activity {
+    display: flex;
+    justify-content: space-between;
+}
+
+#activity {
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    max-width: 95%;
+    margin: 4rem 0;
+}
+
+.doubleCarteActivity {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Mise en forme des pavés */
+
+.marseilleRooms {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 10px;
+    background-color: #F2F2F2;
+}
+
+section div header {
+    margin: 1rem;
+}
+
+.marseilleRoomsHeader {
+    margin-left: 2em;
+}
+
+.centre {
+    margin: 0 auto;
+}
+
+.carte {
+    background-color: white;
+    padding: 0.375rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 16px #0000002e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.asideHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.asideHeader i {
+    margin: auto 0;
+}
+
+.cartePopularLink {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    overflow: auto;
+}
+
+.cartePopularFigure {
+    position: relative;
+    min-height: 100%;
+    width: 33%;
+    min-width: 33%;
+    max-width: 33%;
+}
+
+figure {
+    margin: 0;
+}
+
+.cartePopularFigureImage {
+    border-radius: 1rem 0 0 1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cartePopularDescription {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.cartePopularDescriptionWhiteSpace {
+    flex: 1;
+}
+
+.cartePopular {
+    height: 8.75rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+section article {
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.carte:hover {
+    box-sizing: border-box;
+    border: 2px solid #aaa;
+}
+
+.carteFigure {
+    margin: 0;
+}
+
+.carteFigureImage {
+    height: 7rem;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.logo {
+    height: auto;
+}
+
+.carteFigcaptionTitle {
+    margin: 0.25rem 0.75rem 0 0.75rem;
+}
+
+.carteDescription {
+    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+.carteGrade {
+    margin: 0 0.75rem 0.25rem 0.75rem;
+}
+
+.carteGradeIcon[data-active=true] {
+    color: #0065FC;
+}
+
+.carteGradeIcon[data-active=false] {
+    color: #d9d9d9;
+}
+
+.fas {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.activityCarte {
+    box-shadow: 0 0 20px #0000002e;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 0.1s;
+}
+
+.topCarte {
+    margin: 0px 0px 20px 0px;
+}
+
+.bigImage {
+    width: 301px;
+    height: 390px;
+}
+
+.smallImage {
+    width: 304px;
+    height: 183px;
+}
+
+.activityItem {
+    box-shadow: 0 0 20px #0000002e;
+    border-radius: 20px;
+    margin: 0px 0px 20px 0px;
+}
+
+.activityCarteFigureImage {
+    background-size: 100% 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0px 0px 22px 0px;
+    max-width: 100%;
+}
+
+.activityCarteFigure {
+    flex: 1;
+}
+
+.activityCarteFigcaptionTitle {
+    margin: 1.2rem 1.5rem;
+}
+
+#mainFooter {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    /**raccourcie : flex-grow; flex-shrink; flex-basis**/
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#mainFooter article {
+    background: #aaa;
+}
+
+
+/********* Responsive Design ********/
+
+@media(max-width:640px) {
+    main {
+        flex-direction: column;
+    }
+    aside,
+    nav {
+        width: auto;
+    }
+    #rooms,
+    #activity {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .headerNav {
+        position: relative;
+        top: 50px;
+        margin-left: 6.5em;
+    }
+    .headerNav ul li:hover {
+        border-bottom: 3px solid #0065fc;
+    }
+    .marseilleRooms {
+        width: auto;
+    }
+    .activityCarteFigcaptionTitle {
+        text-align: center;
+    }
+    .activityCarteFigureImage {
+        width: 100%;
+    }
+    #mainFooter {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        /**raccourcie : flex-grow; flex-shrink; flex-basis**/
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    /****** Taille d'écran moyenne ********/
+    .cartes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .carte {
+        display: flex;
+        flex: 0 0 48%;
+    }
+    .headerNav ul li:hover {
+        border-top: 3px solid #0065fc;
+    }
+    .activityCarteFigureImage {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /******* Taille d'écran grande ********/
+    .carte {
+        flex: 0 0 32%;
+    }
+    .activityItem {
+        display: flex;
+        flex: 0 0 23%;
+    }
+    .carteActivity {
+        flex: 0 0 23%;
+    }
+    .activityCarteFigureImage {
+        width: 100%;
+    }
+}
