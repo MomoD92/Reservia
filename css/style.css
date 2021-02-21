@@ -464,7 +464,7 @@ a {
 
 /********* Responsive Design ********/
 
-@media(max-width:640px) {
+@media screen and (min-width:320px) and (max-width:480px) {
     main {
         flex-direction: column;
     }
@@ -504,7 +504,7 @@ a {
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
     /****** Taille d'écran moyenne ********/
     .cartes {
         display: flex;
@@ -523,7 +523,7 @@ a {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
     /******* Taille d'écran grande ********/
     .carte {
         flex: 0 0 32%;
