@@ -470,6 +470,9 @@ a {
     main {
         flex-direction: column;
     }
+    .headerSignUp {
+        margin-left: -80px;
+    }
     aside,
     nav {
         width: auto;
@@ -513,6 +516,9 @@ a {
 @media screen and (max-width:768px) {
     main {
         flex-direction: column;
+    }
+    .headerSignUp {
+        margin-left: -80px;
     }
     aside,
     nav {
