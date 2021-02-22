@@ -512,7 +512,7 @@ a {
         flex-direction: column;
     }
     .searchFormInput {
-        padding: 0 1rem;
+        padding: 0 0.7rem;
     }
 }
 
@@ -564,7 +564,7 @@ a {
         flex-direction: column;
     }
     .searchFormInput {
-        padding: 0 1rem;
+        padding: 0 0.7rem;
     }
 }
 
