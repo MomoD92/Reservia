@@ -494,6 +494,9 @@ a {
     .marseilleRooms {
         width: auto;
     }
+    .marseilleRoomsHeader {
+        margin: 0;
+    }
     .activityCarteFigcaptionTitle {
         text-align: center;
     }
@@ -564,7 +567,10 @@ a {
         flex-direction: column;
     }
     .searchFormInput {
-        padding: 0;
+        padding: 0 0.7rem;
+    }
+    .marseilleRoomsHeader {
+        margin: 0;
     }
 }
 
