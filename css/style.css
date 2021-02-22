@@ -495,7 +495,7 @@ a {
         width: auto;
     }
     .marseilleRoomsHeader {
-        margin: 0;
+        margin-left: 0;
     }
     .activityCarteFigcaptionTitle {
         text-align: center;
@@ -570,7 +570,7 @@ a {
         padding: 0 0.7rem;
     }
     .marseilleRoomsHeader {
-        margin: 0;
+        margin-left: 0;
     }
 }
 
