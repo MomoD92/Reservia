@@ -486,7 +486,7 @@ a {
     .headerNav {
         position: relative;
         top: 50px;
-        margin-left: 6.5em;
+        /* margin-left: 6.5em;*/
     }
     .headerNav ul li:hover {
         border-bottom: 3px solid #0065fc;
@@ -533,7 +533,7 @@ a {
     .headerNav {
         position: relative;
         top: 50px;
-        margin-left: 6.5em;
+        /* margin-left: 6.5em;*/
     }
     .headerNav ul li:hover {
         border-bottom: 3px solid #0065fc;
