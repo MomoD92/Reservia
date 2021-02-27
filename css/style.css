@@ -235,6 +235,10 @@ aside {
     border-radius: 1.25rem;
 }
 
+aside article {
+    margin: 0 1em;
+}
+
 .asideContent {
     display: flex;
     flex-direction: column;
@@ -282,13 +286,14 @@ section div header {
 }
 
 .marseilleRoomsHeader {
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .more {
     font-family: "Raleway", sans-serif;
-    margin: 2rem;
+    margin: 1rem;
     font-weight: 600;
+    margin-left: 40px;
 }
 
 
@@ -299,7 +304,7 @@ section div header {
 .cartes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: auto;
 }
 
@@ -311,13 +316,15 @@ section div header {
     transition-duration: 0.1s;
     cursor: pointer;
     box-sizing: border-box;
+    border: solid 2px transparent;
+    transition: 0.6s ease;
 }
 
 .asideHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 auto;
+    margin-left: 1em;
 }
 
 .asideHeader i {
@@ -337,6 +344,7 @@ section div header {
     width: 33%;
     min-width: 33%;
     max-width: 33%;
+    font-size: 1em;
 }
 
 figure {
@@ -368,7 +376,7 @@ figure {
 }
 
 section article {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     background-color: #fff;
 }
 
@@ -478,6 +486,7 @@ a {
     /**raccourcie : flex-grow; flex-shrink; flex-basis**/
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-left: 1em;
 }
 
 #mainFooter article {
@@ -502,7 +511,6 @@ a {
     #activity {
         display: flex;
         flex-direction: column;
-        width: auto;
     }
     .headerNav {
         position: relative;
@@ -541,6 +549,9 @@ a {
 }
 
 @media screen and (max-width:768px) {
+    body {
+        width: 100%;
+    }
     main {
         flex-direction: column;
     }
@@ -557,7 +568,7 @@ a {
     }
     #rooms {
         display: flex;
-        flex-direction: scolumn-reverse;
+        flex-direction: column-reverse;
         width: auto;
     }
     #activity {
@@ -576,7 +587,7 @@ a {
     }
     .marseilleRooms {
         width: auto;
-        background-color: #F2F2F2;
+        background-color: white;
     }
     .activityCarteFigcaptionTitle {
         text-align: center;
@@ -628,6 +639,9 @@ a {
     .filterItemDouble {
         display: flex;
         flex-direction: column;
+    }
+    .more {
+        margin-left: 0;
     }
 }
 
