@@ -12,6 +12,7 @@ body {
     max-width: 95%;
     margin: auto;
     overflow-x: hidden;
+    font-family: "Raleway", sans-serif;
 }
 
 main {
@@ -38,8 +39,6 @@ footer {
     justify-content: space-between;
     background-color: #fff;
     top: 0;
-    align-items: center;
-    height: 95px;
 }
 
 .headerLogo {
@@ -47,7 +46,6 @@ footer {
     border: 0;
     padding: 0.5em;
     position: absolute;
-    ;
 }
 
 .headerSignUp {
@@ -58,7 +56,7 @@ footer {
 }
 
 .headerNav {
-    width: 90%;
+    width: 100%;
     top: 0;
 }
 
@@ -69,6 +67,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    margin: auto;
 }
 
 .headerNav ul li {
@@ -78,6 +77,11 @@ footer {
     float: left;
     padding: 1.2rem;
     border-bottom: 3px transparent solid;
+}
+
+.headerNav ul li:hover {
+    border-top: 3px solid #0065fc;
+    color: #0065FC;
 }
 
 .headerNav ul li a:hover {
@@ -119,7 +123,7 @@ footer {
     width: 14rem;
     font-size: 1rem;
     font-weight: bold;
-    font-family: "Raleway", "Sans serif";
+    font-family: "Raleway", sans-serif;
 }
 
 .searchFormInput::placeholder {
@@ -135,9 +139,13 @@ footer {
     border: none;
     border-radius: 0 1rem 1rem 0;
     padding: 0 1.5rem;
-    font-family: "Raleway", "Sans serif";
+    font-family: "Raleway", Sans-serif;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.fas.fa-search {
+    display: none;
 }
 
 .filter {
@@ -196,11 +204,13 @@ footer {
     margin: 1rem 0 2rem 0;
 }
 
+.filterItemDouble {
+    display: flex;
+}
+
 .filterResultIcon {
-    height: 2rem;
-    width: 2rem;
-    min-height: 2rem;
-    min-width: 2rem;
+    min-height: 1.1rem;
+    min-width: 1.1rem;
     border: solid 1px #d9d9d9;
     border-radius: 100%;
     display: flex;
@@ -211,6 +221,7 @@ footer {
 
 .filterResultIcon i {
     color: #0065FC;
+    font-size: xx-small;
 }
 
 .filterResultText {
@@ -221,6 +232,7 @@ aside {
     width: 35%;
     margin: 10px;
     background-color: #F2F2F2;
+    border-radius: 1.25rem;
 }
 
 .asideContent {
@@ -262,6 +274,7 @@ aside {
     width: 70%;
     margin: 10px;
     background-color: #F2F2F2;
+    border-radius: 1.25rem;
 }
 
 section div header {
@@ -269,17 +282,25 @@ section div header {
 }
 
 .marseilleRoomsHeader {
-    margin-left: 2em;
+    margin-left: 10px;
 }
 
-.centre {
-    margin: 0 auto;
+.more {
+    font-family: "Raleway", sans-serif;
+    margin: 2rem;
+    font-weight: 600;
 }
+
+
+/*.centre {
+    margin: 0 auto;
+}*/
 
 .cartes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: auto;
 }
 
 .carte {
@@ -347,7 +368,7 @@ figure {
 }
 
 section article {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     background-color: #fff;
 }
 
@@ -526,11 +547,19 @@ a {
     .headerSignUp {
         margin-left: -80px;
     }
-    aside,
+    aside {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
     nav {
         width: auto;
     }
-    #rooms,
+    #rooms {
+        display: flex;
+        flex-direction: scolumn-reverse;
+        width: auto;
+    }
     #activity {
         display: flex;
         flex-direction: column;
@@ -542,10 +571,12 @@ a {
         /* margin-left: 6.5em;*/
     }
     .headerNav ul li:hover {
+        border-top: none;
         border-bottom: 3px solid #0065fc;
     }
     .marseilleRooms {
         width: auto;
+        background-color: #F2F2F2;
     }
     .activityCarteFigcaptionTitle {
         text-align: center;
@@ -572,6 +603,32 @@ a {
     .marseilleRoomsHeader {
         margin-left: 0;
     }
+    .fas.fa-search {
+        display: block;
+    }
+    .searchFormBtnText {
+        display: none;
+    }
+    .searchFormBtn {
+        border-radius: 1rem 1rem 1rem 1rem;
+    }
+    .headerNav ul li {
+        padding: 0.2rem;
+    }
+    #mainHeader {
+        height: 89px;
+        border-bottom: 3px solid #f2f2f2;
+    }
+    .search {
+        padding-top: 1em;
+    }
+    .filterTitle {
+        width: 50%;
+    }
+    .filterItemDouble {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -585,9 +642,6 @@ a {
         display: flex;
         flex: 0 0 48%;
     }
-    .headerNav ul li:hover {
-        border-top: 3px solid #0065fc;
-    }
     .activityCarteFigureImage {
         width: 100%;
     }
@@ -596,7 +650,7 @@ a {
 @media screen and (min-width: 1080px) {
     /******* Taille d'écran grande ********/
     .carte {
-        flex: 0 0 32%;
+        flex: 0 0 28%;
     }
     .activityItem {
         display: flex;
